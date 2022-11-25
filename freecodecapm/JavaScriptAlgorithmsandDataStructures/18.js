@@ -28,8 +28,8 @@ myStr = "Hello World"; // Change this line
                             /*Use Bracket Notation to Find the Nth Character in a String*/
 
 // Setup
-const lastNameD = "Lovelace";
+const lastNameC = "Lovelace";
 
 // Only change code below this line
-const thirdLetterOfLastName = lastNameD[2]; // Change this line
+const thirdLetterOfLastName = lastNameC[2]; // Change this line
 
