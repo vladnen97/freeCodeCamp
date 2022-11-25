@@ -81,6 +81,23 @@ const myArrayH = [["John", 23], ["dog", 3]];
 
 let removedFromMyArrayB = myArrayH.shift();
 
+/*Manipulate Arrays With unshift()*/
+
+// Setup
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+
+// Only change code below this line
+myArray.unshift(["Paul", 35]);
+
+/*Shopping List*/
+
+const myListD = [["first subarray", 1],
+                ["second subarray", 2],
+                ["third subarray", 3],
+                ["fourth subarray",4],
+                ["fifth subarray", 5]];
+
 
 
 
