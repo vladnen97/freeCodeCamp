@@ -59,12 +59,27 @@ const myDataE = myArrayE[2][1];
 /*Manipulate Arrays With push()*/
 
 // Setup
-const myArray = [["John", 23], ["cat", 2]];
+const myArrayF = [["John", 23], ["cat", 2]];
 
 // Only change code below this line
-myArray.push(["dog", 3]);
+myArrayF.push(["dog", 3]);
 
 /*Manipulate Arrays With pop()*/
+
+// Setup
+const myArrayG = [["John", 23], ["cat", 2]];
+
+// Only change code below this line
+let removedFromMyArrayA = myArrayG.pop();
+
+/*Manipulate Arrays With shift()*/
+
+// Setup
+const myArrayH = [["John", 23], ["dog", 3]];
+
+// Only change code below this line
+
+let removedFromMyArrayB = myArrayH.shift();
 
 
 
