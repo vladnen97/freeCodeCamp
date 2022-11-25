@@ -101,7 +101,44 @@ console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr));
 
-/*Understanding Boolean Values*/
+/*Use Conditional Logic with If Statements*/
+
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    }
+    return "No, that was false";
+}
+
+/*Comparison with the Equality Operator*/
+function testEqual(val) {
+    if (val == 12) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+
+/*Comparison with the Strict Equality Operator*/
+
+// Setup
+function testStrict(val) {
+    if (val === 7) { // Change this line
+        return "Equal";
+    }
+    return "Not Equal";
+}
+
+testStrict(10);
+
+/*Comparison with the Inequality Operator*/
+function testNotEqual(val) {
+    if (valA != 99) { // Change this line
+        return "Not Equal";
+    }
+    return "Equal";
+}
+
+testNotEqual(10);
 
 
 
