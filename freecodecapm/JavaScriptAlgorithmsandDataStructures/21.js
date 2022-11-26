@@ -38,10 +38,18 @@ function lookUpProfile(name, prop) {
     return "No such contact";
 }
 
-console.log(lookUpProfile("Akira", "likes"));
-console.log(lookUpProfile("Akira", "address"));
-console.log(lookUpProfile("Bob", "potato"));
-console.log(lookUpProfile("Bob", "number"));
-console.log(lookUpProfile("Harry", "likes"));
-console.log(lookUpProfile("Sherlock", "likes"));
-console.log(lookUpProfile("Kristian", "lastName"));
+/*Recursion*/
+
+function countdown(n){
+    if (n < 1) {
+        return [];
+    } else  {
+        const myArr = countdown(n-1);
+        myArr.unshift(n);
+        return myArr;
+    }
+}
+
+
+/*Use Recursion to Create a Range of Numbers*/
+
