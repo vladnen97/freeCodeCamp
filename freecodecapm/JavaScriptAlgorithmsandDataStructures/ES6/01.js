@@ -90,6 +90,57 @@ console.log(carrot.name); // Should display 'carrot'
 
 /*Use getters and setters to Control Access to an Object*/
 
+// Only change code below this line
+class Thermostat {
+    constructor(temperatureInF) {
+        this._temperatureInC = 5/9 * (temperatureInF - 32);
+    }
+    get temperature() {
+        return this._temperatureInC;
+    }
+    set temperature(updateTempInC) {
+        this._temperatureInC = updateTempInC;
+    }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+
+/*Create a Module Script*/
+
+<html>
+    <body>
+        <!-- Only change code below this line -->
+        <script type="module" src="index.js"></script>
+        <!-- Only change code above this line -->
+    </body>
+</html>
+
+/*Use export to Share a Code Block*/
+
+const uppercaseString = (string) => {
+    return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+    return string.toLowerCase()
+}
+
+export {uppercaseString, lowercaseString };
+
+/*Reuse JavaScript Code Using import*/
+
+import {uppercaseString, lowercaseString } from './string_functions.js';
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+/*Use * to Import Everything from a File*/
+
 
 
 
