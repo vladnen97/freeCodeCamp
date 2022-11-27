@@ -25,13 +25,13 @@ let resultD = fccRegex.test(myStringB);
 /*EXtract matched string */
 let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
-let resultD = extractStr.match(codingRegex); // Change this line
+let resultDA = extractStr.match(codingRegex); // Change this line
 
 /*Find More Than the First Match*/
 
 let twinkleStar = "Twinkle, twinkle, little star";
 let starRegex = /Twinkle/gi; // Change this line
-let resultE = twinkleStar.match(starRegex); // Change this line
+let resultEA = twinkleStar.match(starRegex); // Change this line
 
 /*Match Anything with Wildcard Period*/
 
@@ -51,6 +51,18 @@ let alphabetRegex = /[a-z]/gi; // Change this line
 let resultG = quoteSampleB.match(alphabetRegex); // Change this line
 
 /*Match Numbers and Letters of the Alphabet*/
+
+let quoteSampleC = "Blueberry 3.141592653s are delicious.";
+let myRegexA = /[h-s2-6]/gi; // Change this line
+let resultH = quoteSampleC.match(myRegexA); // Change this line
+
+/*Match Single Characters Not Specified*/
+
+let quoteSampleD = "3 blind mice.";
+let myRegexB = /[^0-9aeiou]/gi; // Change this line
+let result = quoteSampleD.match(myRegexB); // Change this line
+
+/*Match Characters that Occur One or More Times*/
 
 
 
