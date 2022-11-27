@@ -44,9 +44,56 @@ const stats = {
     min: -0.75,
     average: 35.85
 };
-const half = ({max, min}) => (max + min) / 2.0;
+
+const half = ({max, min}) => console.log((max + min) / 2.0);
+half(stats);
 
 /*Create Strings using Template Literals*/
+
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+    const failureItems = [];
+    for (let i=0; i < arr.length; i++) {
+        failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+    }
+    return failureItems;
+}
+
+/*Write Concise Object Literal Declarations Using Object Property Shorthand*/
+
+const createPerson = (name, age, gender) => {
+    return {name, age, gender};
+};
+
+/*Write Concise Declarative Functions with ES6*/
+
+const bicycle = {
+    gear: 2,
+    setGear(newGear) {
+        this.gear = newGear;
+    }
+};
+
+/*Use class Syntax to Define a Constructor Function*/
+
+class Vegetable {
+    constructor(vegetable) {
+        this.name = vegetable;
+    }
+}
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+/*Use getters and setters to Control Access to an Object*/
+
+
+
+
+
 
 
 
