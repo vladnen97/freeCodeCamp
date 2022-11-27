@@ -60,9 +60,26 @@ let resultH = quoteSampleC.match(myRegexA); // Change this line
 
 let quoteSampleD = "3 blind mice.";
 let myRegexB = /[^0-9aeiou]/gi; // Change this line
-let result = quoteSampleD.match(myRegexB); // Change this line
+let resultI = quoteSampleD.match(myRegexB); // Change this line
 
 /*Match Characters that Occur One or More Times*/
+
+let difficultSpelling = "Mississippi";
+let myRegexC = /s+/gi; // Change this line
+let resultJ = difficultSpelling.match(myRegexC);
+
+/*Match Characters that Occur Zero or More Times*/
+let chewieQuote = "Aaaaaaaaaaaaaaaaaargh";
+let chewieRegex = /Aa*/; // Change only this line
+let resultK = chewieQuote.match(chewieRegex);
+
+/*Find Characters with Lazy Matching*/
+
+let text = "<h1>Winter is coming</h1>";
+let myRegexD = /<.*?>/; // Change this line
+let result = text.match(myRegexD);
+
+/*Find One or More Criminals in a Hunt*/
 
 
 
