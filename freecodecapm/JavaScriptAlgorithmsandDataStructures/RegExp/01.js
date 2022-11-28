@@ -13,7 +13,7 @@ let resultB = waldoRegex.test(waldoIsHiding);
 /*Match a Literal String with Different Possibilities*/
 
 let petString = "James has a pet cat.";
-let petRegex = /cat| dog| bird| fish/; // Change this line
+let petRegex = /cat | dog | bird | fish/; // Change this line
 let resultC = petRegex.test(petString);
 
 /*Ignore Case While Matching*/
@@ -22,7 +22,7 @@ let myStringB = "freeCodeCamp";
 let fccRegex = /freeCodeCamp/i; // Change this line
 let resultD = fccRegex.test(myStringB);
 
-/*EXtract matched string */
+/*Extract matched string */
 let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let resultDA = extractStr.match(codingRegex); // Change this line
@@ -112,7 +112,53 @@ let resultQ = movieNameA.match(numRegex).length;
 /*Match All Non-Numbers*/
 let movieNameB = "2001: A Space Odyssey";
 let noNumRegex = /\D/gi; // Change this line
-let result = movieNameB.match(noNumRegex).length;
+let resultR = movieNameB.match(noNumRegex).length;
+
+/*Restrict Possible Usernames*/
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/gi; // Change this line
+let resultS = userCheck.test(username);
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
