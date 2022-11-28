@@ -93,11 +93,15 @@ let resultN = lastRegex.test(cabooseB);
 
 /*Match All Letters and Numbers*/
 
-let quoteSample = "The five boxing wizards jump quickly.";
+let quoteSampleE = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/gi; // Change this line
-let resultO = quoteSample.match(alphabetRegexV2).length;
+let resultO = quoteSampleE.match(alphabetRegexV2).length;
 
-/**/
+/*Match Everything But Letters and Numbers*/
+
+let quoteSampleF = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/gi; // Change this line
+let resultP = quoteSampleF.match(nonAlphabetRegex).length;
 
 
 
