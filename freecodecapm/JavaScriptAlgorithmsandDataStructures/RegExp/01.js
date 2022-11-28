@@ -122,11 +122,15 @@ let resultS = userCheck.test(username);
 
 /*Match Whitespace*/
 
-let sample = "Whitespace is important in separating words";
+let sampleA = "Whitespace is important in separating words";
 let countWhiteSpace = /\s/g; // Change this line
-let resultT = sample.match(countWhiteSpace);
+let resultT = sampleA.match(countWhiteSpace);
 
+/*Match Non-Whitespace Characters*/
 
+let sampleB = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result = sampleB.match(countNonWhiteSpace);
 
 
 
