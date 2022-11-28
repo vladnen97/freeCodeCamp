@@ -70,79 +70,85 @@ let resultJ = difficultSpelling.match(myRegexC);
 
 /*Match Characters that Occur Zero or More Times*/
 let chewieQuote = "Aaaaaaaaaaaaaaaaaargh";
-let chewieRegex = /Aa*/; // Change only this line
+let chewieRegex = /Aa*/;
 let resultK = chewieQuote.match(chewieRegex);
 
 /*Find Characters with Lazy Matching*/
 
 let text = "<h1>Winter is coming</h1>";
-let myRegexD = /<.*?>/; // Change this line
+let myRegexD = /<.*?>/;
 let resultL = text.match(myRegexD);
 
 /*Match Beginning string patterns */
 
 let cabooseA = "The last car on a train is the caboose";
-let firstRegex = /^the/i; // Change this line
+let firstRegex = /^the/i;
 let resultM = firstRegex.test(cabooseA);
 
 /*Match Ending String Patterns*/
 
 let cabooseB = "The last car on a train is the caboose";
-let lastRegex = /caboose$/; // Change this line
+let lastRegex = /caboose$/;
 let resultN = lastRegex.test(cabooseB);
 
 /*Match All Letters and Numbers*/
 
 let quoteSampleE = "The five boxing wizards jump quickly.";
-let alphabetRegexV2 = /\w/gi; // Change this line
+let alphabetRegexV2 = /\w/gi;
 let resultO = quoteSampleE.match(alphabetRegexV2).length;
 
 /*Match Everything But Letters and Numbers*/
 
 let quoteSampleF = "The five boxing wizards jump quickly.";
-let nonAlphabetRegex = /\W/gi; // Change this line
+let nonAlphabetRegex = /\W/gi;
 let resultP = quoteSampleF.match(nonAlphabetRegex).length;
 
 /*Match All Numbers*/
 
 let movieNameA = "2001: A Space Odyssey";
-let numRegex = /\d/gi; // Change this line
+let numRegex = /\d/gi;
 let resultQ = movieNameA.match(numRegex).length;
 
 /*Match All Non-Numbers*/
 let movieNameB = "2001: A Space Odyssey";
-let noNumRegex = /\D/gi; // Change this line
+let noNumRegex = /\D/gi;
 let resultR = movieNameB.match(noNumRegex).length;
 
 /*Restrict Possible Usernames*/
 
 let username = "JackOfAllTrades";
-let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/gi; // Change this line
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/gi;
 let resultS = userCheck.test(username);
 
 /*Match Whitespace*/
 
 let sampleA = "Whitespace is important in separating words";
-let countWhiteSpace = /\s/g; // Change this line
+let countWhiteSpace = /\s/g;
 let resultT = sampleA.match(countWhiteSpace);
 
 /*Match Non-Whitespace Characters*/
 
 let sampleB = "Whitespace is important in separating words";
-let countNonWhiteSpace = /\S/g; // Change this line
+let countNonWhiteSpace = /\S/g;
 let resultU = sampleB.match(countNonWhiteSpace);
 
 /*Specify Upper and Lower Number of Matches*/
 
 let ohStr = "Ohhh no";
-let ohRegex = /oh{3,6} no/gi; // Change this line
+let ohRegex = /oh{3,6} no/gi;
 let resultV = ohRegex.test(ohStr);
 
 /*Specify Only the Lower Number of Matches*/
 
 let haStr = "Hazzzzah";
-let haRegex = /haz{4,}ah/gi; // Change this line
+let haRegex = /haz{4,}ah/gi;
 let resultW = haRegex.test(haStr);
+
+/*Specify Exact Number of Matches*/
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/g;
+let resultX = timRegex.test(timStr);
 
 
 
