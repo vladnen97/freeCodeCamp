@@ -77,9 +77,14 @@ let resultK = chewieQuote.match(chewieRegex);
 
 let text = "<h1>Winter is coming</h1>";
 let myRegexD = /<.*?>/; // Change this line
-let result = text.match(myRegexD);
+let resultL = text.match(myRegexD);
 
-/*Find One or More Criminals in a Hunt*/
+/*Match Beginning string patterns */
+
+let caboose = "The last car on a train is the caboose";
+let firstRegex = /^the/i; // Change this line
+let resultM = firstRegex.test(caboose);
+
 
 
 
