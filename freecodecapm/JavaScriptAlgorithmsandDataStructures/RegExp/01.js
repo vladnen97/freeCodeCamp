@@ -81,9 +81,17 @@ let resultL = text.match(myRegexD);
 
 /*Match Beginning string patterns */
 
-let caboose = "The last car on a train is the caboose";
+let cabooseA = "The last car on a train is the caboose";
 let firstRegex = /^the/i; // Change this line
-let resultM = firstRegex.test(caboose);
+let resultM = firstRegex.test(cabooseA);
+
+/*Match Ending String Patterns*/
+
+let cabooseB = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let result = lastRegex.test(cabooseB);
+
+
 
 
 
