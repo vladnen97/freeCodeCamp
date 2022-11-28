@@ -172,8 +172,22 @@ let resultAa = myRegexAa.test(myStringAz); // Change this line
 /*Reuse Patterns Using Capture Groups*/
 
 let repeatNum = "42 42 42";
-let reRegex = /(\d+) \1 \1/; // Change this line
+let reRegex = /^(\d+) \1 \1$/; // Change this line
 let resultAb = reRegex.test(repeatNum);
+
+/*Use Capture Groups to Search and Replace*/
+
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let resultAc = str.replace(fixRegex, replaceText);
+
+/*Remove Whitespace from Start and End*/
+
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/gi; // Change this line
+let resultAd = hello.replace(wsRegex, ""); // Change this line
+
 
 
 
