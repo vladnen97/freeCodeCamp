@@ -166,8 +166,14 @@ let resultZ = pwRegex.test(sampleWord);
 
 let myStringAz = "Eleanor Roosevelt";
 let myRegexAa = /(Franklin D.|Eleanor) Roosevelt/; // Change this line
-let result = myRegexAa.test(myStringAz); // Change this line
-// After passing the challenge experiment with myString and see how the grouping works
+let resultAa = myRegexAa.test(myStringAz); // Change this line
+
+
+/*Reuse Patterns Using Capture Groups*/
+
+let repeatNum = "42 42 42";
+let reRegex = /(\d+) \1 \1/; // Change this line
+let resultAb = reRegex.test(repeatNum);
 
 
 
