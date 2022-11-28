@@ -156,6 +156,12 @@ let favWord = "favorite";
 let favRegex = /favou?rite/; // Change this line
 let resultY = favRegex.test(favWord);
 
+/*Positive and Negative Lookahead*/
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6,})(?=\D*\d\d\D*)/; // Change this line
+let resultZ = pwRegex.test(sampleWord);
+
 
 
 
