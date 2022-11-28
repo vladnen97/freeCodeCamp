@@ -1,8 +1,8 @@
 /*Using the Test Method*/
 
-let myString = "Hello, World!";
-let myRegex = /Hello/;
-let resultA = myRegex.test(myString); // Change this line
+let myStringA = "Hello, World!";
+let myRegexAd = /Hello/;
+let resultA = myRegexAd.test(myStringA); // Change this line
 
 /* Match Literal Strings*/
 
@@ -161,6 +161,13 @@ let resultY = favRegex.test(favWord);
 let sampleWord = "astronaut";
 let pwRegex = /(?=\w{6,})(?=\D*\d\d\D*)/; // Change this line
 let resultZ = pwRegex.test(sampleWord);
+
+/*Check For Mixed Grouping of Characters*/
+
+let myStringAz = "Eleanor Roosevelt";
+let myRegexAa = /(Franklin D.|Eleanor) Roosevelt/; // Change this line
+let result = myRegexAa.test(myStringAz); // Change this line
+// After passing the challenge experiment with myString and see how the grouping works
 
 
 
