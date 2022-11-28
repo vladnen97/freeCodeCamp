@@ -89,9 +89,15 @@ let resultM = firstRegex.test(cabooseA);
 
 let cabooseB = "The last car on a train is the caboose";
 let lastRegex = /caboose$/; // Change this line
-let result = lastRegex.test(cabooseB);
+let resultN = lastRegex.test(cabooseB);
 
+/*Match All Letters and Numbers*/
 
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/gi; // Change this line
+let resultO = quoteSample.match(alphabetRegexV2).length;
+
+/**/
 
 
 
