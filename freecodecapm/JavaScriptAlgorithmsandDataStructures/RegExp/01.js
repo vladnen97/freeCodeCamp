@@ -150,7 +150,11 @@ let timStr = "Timmmmber";
 let timRegex = /Tim{4}ber/g;
 let resultX = timRegex.test(timStr);
 
+/*Check for All or None*/
 
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let resultY = favRegex.test(favWord);
 
 
 
