@@ -129,6 +129,23 @@ let foodsA = {
 let checkInventory = (scannedItem) => foodsA[scannedItem];
 console.log(checkInventory("apples"));
 
+/*Use the delete Keyword to Remove Object Properties*/
+
+let foodsD = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+};
+delete foodsD.oranges;
+delete foodsD.plums;
+delete foodsD.strawberries;
+console.log(foodsD);
+
+
+
 
 
 
