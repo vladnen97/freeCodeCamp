@@ -10,6 +10,9 @@
 .smaller-image {
     width: 100px;
 }
+.silver-background {
+    background-color: silver;
+}
 
 h2 {
     font-family: Lobster, monospace;
