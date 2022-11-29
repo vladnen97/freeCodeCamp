@@ -21,3 +21,10 @@ function factorialize(num) {
     }
 }
 factorialize(5);
+
+/*Find the Longest Word in a String*/
+
+let str = "The quick brown fox jumped over the lazy dog";
+str = str.split(" ");
+let longestWord = str.sort((a,b) => b.length - a.length);
+console.log(longestWord[0].length);
