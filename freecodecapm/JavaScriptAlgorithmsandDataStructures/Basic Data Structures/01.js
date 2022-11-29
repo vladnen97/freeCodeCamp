@@ -34,4 +34,23 @@ arr.splice(1,4);
 // Only change code above this line
 console.log(arr);
 
+/*Add Items Using splice()*/
+
+function htmlColorNames(arr) {
+    arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+    return arr;
+}
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+
+
+
+
+
+
+
+
+
+
+
 
