@@ -5,3 +5,9 @@ function convertCtoF(celsius) {
 }
 
 convertCtoF(30);
+
+/*Reverse a String*/
+
+let reverseString = (str) => str.split("").reverse().join("");
+reverseString("hello");
+
