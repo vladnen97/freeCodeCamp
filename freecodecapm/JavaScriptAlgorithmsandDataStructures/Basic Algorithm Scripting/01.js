@@ -50,6 +50,27 @@ function confirmEnding(str, target) {
 }
 // console.log(confirmEnding("Bastian", "n"));
 
+/*Repeat a String Repeat a String*/
+
+function repeatStringNumTimes(str, num) {
+    let newStr="";
+    for (let i=0; i < num; i++) {
+        newStr += str;
+    }
+    return newStr
+}
+// console.log(repeatStringNumTimes("abc", 3));
+
+/*Truncate a String*/
+
+function truncateString(str, num) {
+    return str.length > num ? str.slice(0, num) + '...' : str;
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+truncateString("Peter Piper picked a peck of pickled peppers", 11);
+
+
 
 
 
