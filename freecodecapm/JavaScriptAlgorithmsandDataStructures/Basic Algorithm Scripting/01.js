@@ -70,8 +70,33 @@ function truncateString(str, num) {
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
 truncateString("Peter Piper picked a peck of pickled peppers", 11);
 
+/*Finders Keepers*/
 
+function findElement(arr, func) {
+    for (let i = 0; i < arr.length; i++) {
+        if (func(arr[i])) {
+            return arr[i];
+        }
+    }
+}
 
+/*function findElement(arr, func) {
+    return arr.find(func);
+}*/
 
+// console.log(findElement([1, 5, 3, 9], num => num % 2 === 0));
 
+/*Boo who*/
 
+function booWho(bool) {
+    return typeof bool == "boolean";
+}
+
+// console.log(booWho(null));
+
+/*Title Case a Sentence*/
+
+function titleCase(str) {
+    return str.toLowerCase().replace(/(?<!['".,-_])\b\w/g, a => a.toUpperCase());
+}
+console.log(titleCase("sHoRt AnD sToUt"));
