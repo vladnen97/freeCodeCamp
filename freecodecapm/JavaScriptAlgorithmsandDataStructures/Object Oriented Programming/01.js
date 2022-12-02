@@ -113,6 +113,21 @@ function joinDogFraternity(candidate) {
     return candidate.constructor === DogD;
 }
 
+/*Change the Prototype to a New Object*/
+
+function DogE(name) {
+    this.name = name;
+}
+
+DogE.prototype = {
+    numLegs: 4,
+    eat: function() {
+        console.log("nom nom nom");
+    },
+    describe: function() {
+        console.log(`My name is ${this.name}`);
+    }
+};
 
 
 
