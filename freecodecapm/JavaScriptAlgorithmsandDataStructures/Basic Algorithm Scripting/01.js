@@ -100,3 +100,15 @@ function titleCase(str) {
     return str.toLowerCase().replace(/(?<!['".,-_])\b\w/g, a => a.toUpperCase());
 }
 console.log(titleCase("sHoRt AnD sToUt"));
+
+/*Slice and Splice*/
+
+function frankenSplice(arr1, arr2, n) {
+    let mergedArr = arr2.slice();
+    mergedArr.splice(n, 0, ...arr1);
+    return mergedArr;
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
+
