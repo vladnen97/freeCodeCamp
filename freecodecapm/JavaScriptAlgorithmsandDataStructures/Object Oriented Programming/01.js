@@ -39,3 +39,6 @@ function Dog() {
     this.numLegs = 4;
 }
 
+/*create an obj by constr func*/
+let houd = new Dog();
+
