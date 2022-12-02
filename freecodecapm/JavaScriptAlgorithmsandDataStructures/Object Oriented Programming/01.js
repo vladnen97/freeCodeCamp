@@ -132,7 +132,14 @@ DogE.prototype = {
 
 /*Understand Where an Object’s Prototype Comes From*/
 
+function DogF(name) {
+    this.name = name;
+}
 
+let beagleA = new DogF("Snoopy");
+
+// Only change code below this line
+DogF.prototype.isPrototypeOf(beagleA);
 
 
 
