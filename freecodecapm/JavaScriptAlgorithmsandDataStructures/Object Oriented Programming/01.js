@@ -42,3 +42,12 @@ function Dog() {
 /*create an obj by constr func*/
 let houd = new Dog();
 
+/*Extend Constructors to Receive Arguments*/
+
+function DogA(name, color) {
+    this.name = name;
+    this.color = color;
+    this.numLegs = 4;
+}
+
+let terrier = new DogA("Terra", "black");
