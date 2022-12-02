@@ -120,14 +120,19 @@ function DogE(name) {
 }
 
 DogE.prototype = {
+    constructor: DogE,
     numLegs: 4,
-    eat: function() {
+    eat() {
         console.log("nom nom nom");
     },
-    describe: function() {
+    describe() {
         console.log(`My name is ${this.name}`);
     }
 };
+
+/*Understand Where an Object’s Prototype Comes From*/
+
+
 
 
 
