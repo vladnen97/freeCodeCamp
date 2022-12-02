@@ -15,8 +15,18 @@ let tuzik = {
     name: "Tuzik",
     numLegs: 4,
     sayLegs: function() {
-        return `This dog has ${this.numLegs} legs.`;
+        return `This dog has ${tuzik.numLegs} legs.`;
     }
 };
 tuzik.sayLegs();
 
+/*Make Code More Reusable with the "this" Keyword*/
+
+let tuzik2 = {
+    name: "Tuzik",
+    numLegs: 4,
+    sayLegs: function() {
+        return `This dog has ${this.numLegs} legs.`;
+    }
+};
+tuzik2.sayLegs();
