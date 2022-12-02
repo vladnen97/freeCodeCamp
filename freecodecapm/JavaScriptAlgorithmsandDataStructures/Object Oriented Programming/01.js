@@ -75,6 +75,15 @@ for (let prop in canary) {
     }
 }
 
+/*Use Prototype Properties to Reduce Duplicate Code*/
+
+function DogB(name) {
+    this.name = name;
+}
+let beagle = new DogB("Snoopy");
+
+DogB.prototype.numLegs = 4;
+
 
 
 
