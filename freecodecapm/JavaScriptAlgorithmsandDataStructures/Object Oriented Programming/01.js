@@ -30,3 +30,12 @@ let tuzik2 = {
     }
 };
 tuzik2.sayLegs();
+
+/*Define a Constructor Function*/
+
+function Dog() {
+    this.name = "Dog";
+    this.color = "brown";
+    this.numLegs = 4;
+}
+
