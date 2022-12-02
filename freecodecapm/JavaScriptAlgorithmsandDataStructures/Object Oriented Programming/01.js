@@ -8,3 +8,15 @@ let dog = {
 
 console.log(dog.name);
 console.log(dog.numLegs);
+
+/*Create a Method on an Object*/
+
+let tuzik = {
+    name: "Tuzik",
+    numLegs: 4,
+    sayLegs: function() {
+        return `This dog has ${this.numLegs} legs.`;
+    }
+};
+tuzik.sayLegs();
+
