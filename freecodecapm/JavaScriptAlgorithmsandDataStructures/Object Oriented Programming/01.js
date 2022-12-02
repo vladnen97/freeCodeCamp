@@ -6,8 +6,7 @@ let dog = {
 
 /*Use Dot Notation to Access the Properties of an Object*/
 
-console.log(dog.name);
-console.log(dog.numLegs);
+console.log(dog);
 
 /*Create a Method on an Object*/
 
@@ -67,6 +66,7 @@ function Bird(name) {
     this.numLegs = 2;
 }
 let canary = new Bird("Tweety");
+console.log(canary);
 let ownProps = [];
 
 for (let prop in canary) {
@@ -83,6 +83,29 @@ function DogB(name) {
 let beagle = new DogB("Snoopy");
 
 DogB.prototype.numLegs = 4;
+
+console.log(beagle);
+
+/*Iterate Over All Properties*/
+
+function DogC(name) {
+    this.name = name;
+}
+Dog.prototype.numLegs = 4;
+
+let beagle1 = new DogC("Snoopy");
+let ownProps1 = [];
+let prototypeProps = [];
+
+for (let prop in beagle) {
+    if (beagle1.hasOwnProperty(prop)) {
+        ownProps1.push(prop);
+    } else {
+        prototypeProps.push(prop);
+    }
+}
+
+
 
 
 
