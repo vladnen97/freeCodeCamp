@@ -109,7 +109,7 @@ function frankenSplice(arr1, arr2, n) {
     return mergedArr;
 }
 
-console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+// console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 
 /*Falsy Bouncer*/
 
@@ -136,4 +136,15 @@ getIndexToIns1([], 1);
 //solution 2
 function getIndexToIns2(arr, num) {
     return arr.filter(val => num > val).length;
+}
+
+/*Mutations*/
+
+function mutation(arr) {
+    const test = arr[1].toLowerCase();
+    const target = arr[0].toLowerCase();
+    for (let i = 0; i < test.length; i++) {
+        if (target.indexOf(test[i]) < 0) return false;
+    }
+    return true;
 }
