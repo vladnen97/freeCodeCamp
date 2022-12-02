@@ -99,7 +99,7 @@ function booWho(bool) {
 function titleCase(str) {
     return str.toLowerCase().replace(/(?<!['".,-_])\b\w/g, a => a.toUpperCase());
 }
-console.log(titleCase("sHoRt AnD sToUt"));
+// console.log(titleCase("sHoRt AnD sToUt"));
 
 /*Slice and Splice*/
 
@@ -120,5 +120,20 @@ function bouncer(arr) {
 
 bouncer([7, "ate", "", false, 9]);
 
+/*Where do I Belong*/
+//solution 1
+function getIndexToIns1(arr, num) {
+    arr.sort((a, b) => a - b);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= num) {
+            return i;
+        }
+    }
+    return arr.length;
+}
+getIndexToIns1([], 1);
 
-
+//solution 2
+function getIndexToIns2(arr, num) {
+    return arr.filter(val => num > val).length;
+}
