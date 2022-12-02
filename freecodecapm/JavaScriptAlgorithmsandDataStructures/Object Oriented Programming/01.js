@@ -84,8 +84,6 @@ let beagle = new DogB("Snoopy");
 
 DogB.prototype.numLegs = 4;
 
-console.log(beagle);
-
 /*Iterate Over All Properties*/
 
 function DogC(name) {
@@ -103,6 +101,16 @@ for (let prop in beagle) {
     } else {
         prototypeProps.push(prop);
     }
+}
+
+/*Understand the Constructor Property*/
+
+function DogD(name) {
+    this.name = name;
+}
+
+function joinDogFraternity(candidate) {
+    return candidate.constructor === DogD;
 }
 
 
