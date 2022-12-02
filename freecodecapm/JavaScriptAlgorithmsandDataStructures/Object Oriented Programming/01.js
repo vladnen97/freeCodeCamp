@@ -141,6 +141,15 @@ let beagleA = new DogF("Snoopy");
 // Only change code below this line
 DogF.prototype.isPrototypeOf(beagleA);
 
+/*Understand the Prototype Chain*/
+
+function DogG(name) {
+    this.name = name;
+}
+let beagleC = new DogG("Snoopy");
+DogG.prototype.isPrototypeOf(beagleC);  // yields true
+
+Object.prototype.isPrototypeOf(DogG.prototype);
 
 
 
