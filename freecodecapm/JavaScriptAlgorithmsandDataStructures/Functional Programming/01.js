@@ -23,3 +23,13 @@ Array.prototype.myFilter = function(callback) {
 };
 [23, 65, 98, 5, 13].myFilter(item => item % 2);
 ["naomi", "quincy", "camperbot"].myFilter(element => element === "naomi");
+
+
+/*Return Part of an Array Using the slice Method*/
+
+function sliceArray(anim, beginSlice, endSlice) {
+    return anim.slice(beginSlice, endSlice);
+}
+
+sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 3);
+
