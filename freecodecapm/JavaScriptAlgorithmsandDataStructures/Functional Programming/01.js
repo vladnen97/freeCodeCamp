@@ -40,3 +40,12 @@ function nonMutatingSplice(cities) {
 }
 nonMutatingSplice(["Chicago", "Delhi", "Islamabad", "London", "Berlin"]);
 
+/*Combine Two Arrays Using the concat Method*/
+
+function nonMutatingConcat(original, attach) {
+    return original.concat(attach);
+}
+nonMutatingConcat([1, 2, 3], [4, 5]);
+
+/**/
+
