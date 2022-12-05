@@ -33,3 +33,10 @@ function sliceArray(anim, beginSlice, endSlice) {
 
 sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 3);
 
+/*Remove Elements from an Array Using slice Instead of splice*/
+
+function nonMutatingSplice(cities) {
+    return cities.slice(0, 3);
+}
+nonMutatingSplice(["Chicago", "Delhi", "Islamabad", "London", "Berlin"]);
+
