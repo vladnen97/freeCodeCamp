@@ -88,14 +88,25 @@ function urlSlug(title) {
 
 /*every method*/
 
-function checkPositive(arr) {
+function checkPositiveA(arr) {
     return arr.every(n => n >= 0);
 }
-checkPositive([1, 2, 3, -4, 5]);
+checkPositiveA([1, 2, 3, -4, 5]);
 
 /*Use the some Method to Check that Any Elements in an Array Meet a Criteria*/
 
-function checkPositive(arr) {
+function checkPositiveB(arr) {
     return arr.some(n => n >= 0);
 }
-checkPositive([1, 2, 3, -4, 5]);
+checkPositiveB([1, 2, 3, -4, 5]);
+
+/*Introduction to Currying and Partial Application*/
+
+function add(x) {
+    return function(y) {
+        return function(z) {
+            return x + y + z;
+        };
+    };
+}
+add(10)(20)(30);
