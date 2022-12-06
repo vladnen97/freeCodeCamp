@@ -76,3 +76,12 @@ function sentensify(str) {
     return str.split(/\W/gi).join(" ");
 }
 sentensify("May-the-force-be-with-you");
+
+/*Apply Functional Programming to Convert Strings to URL Slugs*/
+
+// Only change code below this line
+function urlSlug(title) {
+    return title.toLowerCase().split(/\s+/gi).filter(n => n !== "").join("-");
+}
+console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
+console.log(urlSlug(" Winter Is  Coming"));
