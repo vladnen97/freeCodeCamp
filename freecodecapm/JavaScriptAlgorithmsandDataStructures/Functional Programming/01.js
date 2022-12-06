@@ -63,3 +63,9 @@ function nonMutatingSort(arr) {
 }
 nonMutatingSort(globalArray);
 
+/*Split a String into an Array Using the split Method*/
+
+function splitify(str) {
+    return str.split(/\W/gi);
+}
+splitify("Hello World,I-am code");
