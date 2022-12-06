@@ -83,5 +83,13 @@ sentensify("May-the-force-be-with-you");
 function urlSlug(title) {
     return title.toLowerCase().split(/\s+/gi).filter(n => n !== "").join("-");
 }
-console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
-console.log(urlSlug(" Winter Is  Coming"));
+// console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
+// console.log(urlSlug(" Winter Is  Coming"));
+
+/*every method*/
+
+function checkPositive(arr) {
+    return arr.every(n => n >= 0);
+}
+
+checkPositive([1, 2, 3, -4, 5]);
