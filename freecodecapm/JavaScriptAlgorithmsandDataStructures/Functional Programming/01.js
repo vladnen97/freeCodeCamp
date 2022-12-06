@@ -91,5 +91,11 @@ function urlSlug(title) {
 function checkPositive(arr) {
     return arr.every(n => n >= 0);
 }
+checkPositive([1, 2, 3, -4, 5]);
 
+/*Use the some Method to Check that Any Elements in an Array Meet a Criteria*/
+
+function checkPositive(arr) {
+    return arr.some(n => n >= 0);
+}
 checkPositive([1, 2, 3, -4, 5]);
