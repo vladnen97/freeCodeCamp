@@ -47,5 +47,10 @@ function nonMutatingConcat(original, attach) {
 }
 nonMutatingConcat([1, 2, 3], [4, 5]);
 
-/**/
+/*Sort an Array Alphabetically using the sort Method*/
+
+function alphabeticalOrder(arr) {
+    return arr.sort();
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
 
