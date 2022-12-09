@@ -59,4 +59,15 @@ whatIsInAName([{ first: "Romeo", last: "Montague" },
                         { first: "Mercutio", last: null },
                         { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 
+/*Spinal Tap Case*/
+
+function spinalCase(str) {
+    let regExp = new RegExp("(?=[A-Z])|[_ -]", "g");
+    return str.split(regExp).join("-").toLowerCase();
+}
+
+spinalCase('thisIsSpinalTap');
+spinalCase('AllThe-small Things');
+spinalCase('Teletubbies say Eh-oh');
+
 
