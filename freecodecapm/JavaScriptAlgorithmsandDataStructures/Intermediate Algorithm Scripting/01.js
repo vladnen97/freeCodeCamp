@@ -37,14 +37,26 @@ diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
 /*Seek and Destroy*/
 
 function destroyer(arr, ...args) {
-    let test = [...args];
-    let newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (!test.includes(arr[i])) {
-            newArr.push(arr[i]);
-        }
-    }
-    return newArr;
+    return arr.filter(elem => !args.includes(elem));
 }
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+/*Wherefore art thou*/
+
+function whatIsInAName(collection, source) {
+    const sourceKeys = Object.keys(source);
+    return collection.filter(obj => {
+        for (let i = 0; i < sourceKeys.length; i++) {
+            if (!obj.hasOwnProperty(sourceKeys[i]) ||
+                obj[sourceKeys[i]] !== source[sourceKeys[i]]) {
+                return false;
+            }
+        }
+        return true;
+    });
+}
+whatIsInAName([{ first: "Romeo", last: "Montague" },
+                        { first: "Mercutio", last: null },
+                        { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
 
