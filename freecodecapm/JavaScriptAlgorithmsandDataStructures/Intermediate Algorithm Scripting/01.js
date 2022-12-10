@@ -168,4 +168,21 @@ function convertHTML(str) {
     return str.replace(/([&<>"'])/g, match => htmlEntities[match]);
 }
 
-console.log(convertHTML("Dolce & Gabbana"));
+// console.log(convertHTML("Dolce & Gabbana"));
+
+/*Sum All Odd Fibonacci Numbers*/
+
+function sumFibs(num) {
+    let prev = 0, next = 1, sumAllOdds = 0;
+    for (let i = 0; i < num; i++) {
+        if (next <= num) {
+            if (next % 2) {
+                sumAllOdds += next;
+            }
+            next = prev + next;
+            prev = next - prev;
+        }
+    }
+    return sumAllOdds;
+}
+// console.log(sumFibs(75025));
