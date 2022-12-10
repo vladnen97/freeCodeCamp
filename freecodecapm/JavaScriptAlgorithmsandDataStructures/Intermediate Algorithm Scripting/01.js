@@ -82,4 +82,17 @@ function translatePigLatin(str) {
 // console.log(translatePigLatin("csonsonant"));
 // console.log(translatePigLatin("acson"));
 
+/*Search and Replace*/
+
+function myReplace(str, before, after) {
+    if (/^[A-Z]/.test(before)) {
+        after = after.replace(/^\w/, after[0].toUpperCase());
+    }else {
+        after = after.replace(/^\w/, after[0].toLowerCase());
+    }
+    return str.replace(before, after);
+}
+
+// console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
+
 
