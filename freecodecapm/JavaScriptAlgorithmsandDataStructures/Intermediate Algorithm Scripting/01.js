@@ -70,4 +70,16 @@ spinalCase('thisIsSpinalTap');
 spinalCase('AllThe-small Things');
 spinalCase('Teletubbies say Eh-oh');
 
+/*Pig Latin*/
+
+function translatePigLatin(str) {
+    if (str.match(/^[aeiou]/)) return str + "way";
+
+    const consonantCluster = str.match(/^[^aeiou]+/)[0];
+    return str.substring(consonantCluster.length) + consonantCluster + "ay";
+}
+
+// console.log(translatePigLatin("csonsonant"));
+// console.log(translatePigLatin("acson"));
+
 
