@@ -95,4 +95,28 @@ function myReplace(str, before, after) {
 
 // console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
 
+/*DNA Pairing*/
 
+function pairElement(str) {
+    const newArr = [];
+    for (const i of str) {
+        switch (i) {
+            case "A":
+                newArr.push(["A", "T"]);
+                break;
+            case "T":
+                newArr.push(["T", "A"]);
+                break;
+            case "C":
+                newArr.push(["C", "G"]);
+                break;
+            case "G":
+                newArr.push(["G", "C"]);
+                break;
+        }
+    }
+    return newArr;
+}
+
+pairElement("ATCGA");
+pairElement("TTGAG");
