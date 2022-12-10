@@ -2,8 +2,8 @@
 
 function sumAll(arr) {
     let sum =0;
-    let minA = arr[0];
-    let maxA = arr[1];
+    let maxA = Math.max(arr[0], arr[1]);
+    let minA = Math.min(arr[0], arr[1]);
     for (let i = minA; i <= maxA; i++) {
         sum+= i;
     }
@@ -174,15 +174,30 @@ function convertHTML(str) {
 
 function sumFibs(num) {
     let prev = 0, next = 1, sumAllOdds = 0;
-    for (let i = 0; i < num; i++) {
-        if (next <= num) {
-            if (next % 2) {
-                sumAllOdds += next;
-            }
-            next = prev + next;
-            prev = next - prev;
+    while (next <= num) {
+        if (next % 2) {
+            sumAllOdds += next;
         }
+        next += prev;
+        prev = next - prev;
     }
     return sumAllOdds;
 }
 // console.log(sumFibs(75025));
+
+/*Sum All Primes*/
+
+function sumPrimes(num) {
+    let sum = 0;
+    while (num >=2) {
+        for (let j = 2; j < num; j++) {
+            if (num % j === 0) {
+                return false;
+            }
+        }
+        num--;
+    }
+    return true;
+}
+
+console.log(sumPrimes(10));
