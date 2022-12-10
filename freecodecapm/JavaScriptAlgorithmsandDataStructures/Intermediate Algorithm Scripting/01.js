@@ -135,4 +135,23 @@ function fearNotLetter(str) {
     return undefined;
 }
 
-console.log(fearNotLetter("abce"));
+// console.log(fearNotLetter("abce"));
+
+/*Sorted Union*/
+
+// function uniteUnique(...arr) {
+//     return [...new Set(arr.flat())];
+// }
+
+function uniteUnique(...args) {
+    let finalArr =[args[0][0]];
+    for (let i =0; i < args.length; i++) {
+        for (let j=0; j < args[i].length; j++) {
+            if (!finalArr.includes(args[i][j])) finalArr.push(args[i][j]);
+        }
+    }
+    return finalArr;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
