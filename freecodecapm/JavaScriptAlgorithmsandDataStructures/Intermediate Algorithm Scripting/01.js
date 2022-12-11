@@ -211,3 +211,13 @@ function dropElements(arr, func) {
 
 // console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}));
 // console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));
+
+/*Steamroller*/
+
+function steamrollArray(arr) {
+    return arr.reduce((flattenArr, elem) => {
+        return Array.isArray(elem) ? [...flattenArr, ...steamrollArray(elem)] : [...flattenArr, elem];
+    }, []);
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
