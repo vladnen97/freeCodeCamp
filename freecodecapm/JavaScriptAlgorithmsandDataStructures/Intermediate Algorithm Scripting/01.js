@@ -237,4 +237,15 @@ function binaryAgent(str) {
 //                             " 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
 
 
+/*Everything Be True*/
+
+function truthCheck(collection, pre) {
+    return collection.every(function (element) {
+        return element.hasOwnProperty(pre) && element[pre];
+    });
+}
+
+// console.log(truthCheck([{name: "Quincy", role: "Founder", isBot: false},
+//     {name: "Naomi", role: "", isBot: false},
+//     {name: "Camperbot", role: "Bot", isBot: true}], "isBot"));
 
