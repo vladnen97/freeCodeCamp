@@ -188,7 +188,6 @@ function sumFibs(num) {
 /*Sum All Primes*/
 
 function sumPrimes(num) {
-    let sum = 0;
     while (num >=2) {
         for (let j = 2; j < num; j++) {
             if (num % j === 0) {
@@ -199,5 +198,16 @@ function sumPrimes(num) {
     }
     return true;
 }
+// console.log(sumPrimes(10));
 
-console.log(sumPrimes(10));
+/*Drop it*/
+
+function dropElements(arr, func) {
+    for (let i =0; i < arr.length; i++) {
+        if (func(arr[i])) return arr.slice(i);
+    }
+    return [];
+}
+
+// console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}));
+// console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));
