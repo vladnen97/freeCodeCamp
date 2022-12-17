@@ -295,3 +295,25 @@ const Person = function(firstAndLast) {
 const bob = new Person('Bob Ross');
 bob.setFirstName("Haskell");
 bob.getFullName();
+
+/*Smallest Common Multiple*/
+
+function smallestCommons(arr) {
+    let min = Math.min(arr[0], arr[1]);
+    let max = Math.max(arr[0], arr[1]);
+    let minNum = max;
+    while (minNum > 0) {
+        let counter = 0;
+        for (let i = min; i <= max; i++) {
+            if (minNum % i === 0) {
+                counter++;
+            }
+        }
+        if (counter === max + 1 - min) {
+            return minNum;
+        }
+        minNum++;
+    }
+}
+
+// console.log(smallestCommons([1,5]));
