@@ -268,3 +268,30 @@ function addTogether(...args) {
 // console.log(addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
 // console.log(addTogether(5)(7));
 
+/*Make a Person*/
+
+const Person = function(firstAndLast) {
+    let [firstName, lastName] = firstAndLast.split(" ");
+    this.getFullName = function() {
+        return `${firstName} ${lastName}`;
+    };
+    this.getFirstName = function() {
+      return `${firstName}`;
+    };
+    this.getLastName = function() {
+      return `${lastName}`;
+    };
+    this.setFirstName = function(first) {
+        firstName = first;
+    };
+    this.setLastName = function(last) {
+        lastName = last;
+    };
+    this.setFullName = function(firstAndLast) {
+        [firstName, lastName] = firstAndLast.split(" ");
+    };
+};
+
+const bob = new Person('Bob Ross');
+bob.setFirstName("Haskell");
+bob.getFullName();
