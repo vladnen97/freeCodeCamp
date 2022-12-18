@@ -195,7 +195,7 @@ function dropElements(arr, func) {
 }
 
 // console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}));
-// console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));
+// console.log(dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;}));
 
 /*Steamroller*/
 
@@ -226,7 +226,7 @@ function binaryAgent(str) {
 
 function truthCheck(collection, pre) {
     return collection.every(function (element) {
-        return element.hasOwnProperty(pre) && element[pre];
+        return element[pre];
     });
 }
 
@@ -257,15 +257,12 @@ function addTogether(...args) {
 
 const Person = function(firstAndLast) {
     let [firstName, lastName] = firstAndLast.split(" ");
-    this.getFullName = function() {
-        return `${firstName} ${lastName}`;
-    };
-    this.getFirstName = function() {
-      return `${firstName}`;
-    };
-    this.getLastName = function() {
-      return `${lastName}`;
-    };
+    this.getFullName = () => `${firstName} ${lastName}`;
+
+    this.getFirstName = () => `${firstName}`;
+
+    this.getLastName = () => `${lastName}`;
+
     this.setFirstName = function(first) {
         firstName = first;
     };
@@ -286,20 +283,20 @@ bob.getFullName();
 function smallestCommons(arr) {
     let min = Math.min(arr[0], arr[1]);
     let max = Math.max(arr[0], arr[1]);
-    let minNum = max;
-    while (minNum > 0) {
-        let counter = 0;
+    let minNum = max, temp = 0;
+
+    while (temp !== minNum) {
+        temp = minNum;
         for (let i = min; i <= max; i++) {
-            if (minNum % i === 0) {
-                counter++;
+            if (minNum % i !== 0) {
+                minNum += max;
+                break;
             }
         }
-        if (counter === max + 1 - min) {
-            return minNum;
-        }
-        minNum++;
     }
+    return minNum;
 }
+
 
 // console.log(smallestCommons([1,5]));
 
@@ -307,14 +304,14 @@ function smallestCommons(arr) {
 
 function sumPrimes(num) {
     function isPrime(num) {
-        for (let i = 2; i <= Math.sqrt(num); i++) {
+        for (let i = 3; i <= Math.sqrt(num); i+=2) {
             if (num % i === 0)
                 return false;
         }
         return true;
     }
-    let sum = 0;
-    for (let i = 2; i <= num; i++) {
+    let sum = 2;
+    for (let i = 3; i <= num; i++) {
         if (isPrime(i))
             sum += i;
     }

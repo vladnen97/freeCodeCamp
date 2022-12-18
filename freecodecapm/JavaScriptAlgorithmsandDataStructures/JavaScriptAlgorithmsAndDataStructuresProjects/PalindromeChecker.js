@@ -1,7 +1,8 @@
 /*Palindrome Checker*/
 
 function palindrome(str) {
-    return str.match(/[a-z0-9]/gi).reverse().join("").toLowerCase() === str.match(/[a-z0-9]/gi).join("").toLowerCase();
+    let letters = str.toLowerCase().match(/[a-z0-9]/gi);
+    return  letters.reverse().join("") === letters.join("");
 }
 
 console.log(palindrome("_eye"));
