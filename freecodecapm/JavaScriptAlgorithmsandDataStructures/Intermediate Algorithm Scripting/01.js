@@ -185,21 +185,6 @@ function sumFibs(num) {
 }
 // console.log(sumFibs(75025));
 
-/*Sum All Primes*/
-
-function sumPrimes(num) {
-    while (num >=2) {
-        for (let j = 2; j < num; j++) {
-            if (num % j === 0) {
-                return false;
-            }
-        }
-        num--;
-    }
-    return true;
-}
-// console.log(sumPrimes(10));
-
 /*Drop it*/
 
 function dropElements(arr, func) {
@@ -317,3 +302,34 @@ function smallestCommons(arr) {
 }
 
 // console.log(smallestCommons([1,5]));
+
+/*Sum All Primes*/
+
+function sumPrimes(num) {
+    function isPrime(num) {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0)
+                return false;
+        }
+        return true;
+    }
+    let sum = 0;
+    for (let i = 2; i <= num; i++) {
+        if (isPrime(i))
+            sum += i;
+    }
+    return sum;
+}
+
+// function sumPrimes(num) {
+//     let primes = [];
+//     for (let i = 2; i <= num; i++) {
+//         if (primes.every((prime) => i % prime !== 0))
+//             primes.push(i);
+//     }
+//     return primes.reduce((sum, prime) => sum + prime, 0);
+// }
+
+// console.log(sumPrimes(10));
+
+
