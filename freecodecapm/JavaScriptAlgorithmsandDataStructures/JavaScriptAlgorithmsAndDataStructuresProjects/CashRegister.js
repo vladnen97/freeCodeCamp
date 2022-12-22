@@ -1,8 +1,7 @@
 /*Cash Register*/
 
 function checkCashRegister(price, cash, cid) {
-    let change;
-    return change;
+    return "";
 }
 
 checkCashRegister(19.5, 20, [
